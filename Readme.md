@@ -3,9 +3,6 @@
 
 Welcome to my Password Cracker!
 
-In this project 
-
-Use the `BLANK_README.md` to get started.
 
 <!-- GETTING STARTED -->
 ## Getting Started
