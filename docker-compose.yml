@@ -1,0 +1,154 @@
+version: '3'
+
+services:
+  master:
+    image: "master"
+    networks:
+      - internal
+    build:
+      context: .
+      dockerfile: /Master/Dockerfile
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    
+
+  minion1:
+    image: "minion"
+    networks:
+      - internal
+    environment:
+      APP_PORT: "80"
+      MASTER_HOST: "master"
+      HOST_NAME: "minion1"
+    build:
+      context: .
+      dockerfile: /Minion/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - master
+    ports:
+      - 8001:80
+
+  minion2:
+    image: "minion"
+    networks:
+      - internal
+    environment:
+      APP_PORT: "80"
+      MASTER_HOST: "master"
+      HOST_NAME: "minion2"
+    build:
+      context: .
+      dockerfile: /Minion/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - master
+    ports:
+      - 8002:80
+
+  minion3:
+    image: "minion"
+    networks:
+      - internal
+    environment:
+      APP_PORT: "80"
+      MASTER_HOST: "master"
+      HOST_NAME: "minion3"
+    build:
+      context: .
+      dockerfile: /Minion/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - master
+    ports:
+      - 8003:80
+    
+  minion4:
+    image: "minion"
+    networks:
+      - internal
+    environment:
+      APP_PORT: "80"
+      MASTER_HOST: "master"
+      HOST_NAME: "minion4"
+    build:
+      context: .
+      dockerfile: /Minion/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - master
+    ports:
+      - 8004:80
+
+  minion5:
+    image: "minion"
+    networks:
+      - internal
+    environment:
+      APP_PORT: "80"
+      MASTER_HOST: "master"
+      HOST_NAME: "minion5"
+    build:
+      context: .
+      dockerfile: /Minion/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - master
+    ports:
+      - 8005:80
+
+  minion6:
+    image: "minion"
+    networks:
+      - internal
+    environment:
+      APP_PORT: "80"
+      MASTER_HOST: "master"
+      HOST_NAME: "minion6"
+    build:
+      context: .
+      dockerfile: /Minion/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - master
+    ports:
+      - 8006:80
+
+  minion7:
+    image: "minion"
+    networks:
+      - internal
+    environment:
+      APP_PORT: "80"
+      MASTER_HOST: "master"
+      HOST_NAME: "minion7"
+    build:
+      context: .
+      dockerfile: /Minion/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - master
+    ports:
+      - 8007:80
+
+  minion8:
+    image: "minion"
+    networks:
+      - internal
+    environment:
+      APP_PORT: "80"
+      MASTER_HOST: "master"
+      HOST_NAME: "minion8"
+    build:
+      context: .
+      dockerfile: /Minion/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - master
+    ports:
+      - 8008:80
+
+
+networks:
+  internal:
