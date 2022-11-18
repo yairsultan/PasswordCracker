@@ -7,7 +7,7 @@ services:
       - internal
     build:
       context: .
-      dockerfile: /Master/Dockerfile
+      dockerfile: ./Master/Dockerfile
     restart: unless-stopped
     ports:
       - 8000:8000
@@ -23,7 +23,7 @@ services:
       HOST_NAME: "minion1"
     build:
       context: .
-      dockerfile: /Minion/Dockerfile
+      dockerfile: ./Minion/Dockerfile
     restart: unless-stopped
     depends_on:
       - master
@@ -40,7 +40,7 @@ services:
       HOST_NAME: "minion2"
     build:
       context: .
-      dockerfile: /Minion/Dockerfile
+      dockerfile: ./Minion/Dockerfile
     restart: unless-stopped
     depends_on:
       - master
@@ -57,7 +57,7 @@ services:
       HOST_NAME: "minion3"
     build:
       context: .
-      dockerfile: /Minion/Dockerfile
+      dockerfile: ./Minion/Dockerfile
     restart: unless-stopped
     depends_on:
       - master
@@ -74,7 +74,7 @@ services:
       HOST_NAME: "minion4"
     build:
       context: .
-      dockerfile: /Minion/Dockerfile
+      dockerfile: ./Minion/Dockerfile
     restart: unless-stopped
     depends_on:
       - master
@@ -91,7 +91,7 @@ services:
       HOST_NAME: "minion5"
     build:
       context: .
-      dockerfile: /Minion/Dockerfile
+      dockerfile: ./Minion/Dockerfile
     restart: unless-stopped
     depends_on:
       - master
@@ -108,7 +108,7 @@ services:
       HOST_NAME: "minion6"
     build:
       context: .
-      dockerfile: /Minion/Dockerfile
+      dockerfile: ./Minion/Dockerfile
     restart: unless-stopped
     depends_on:
       - master
@@ -125,7 +125,7 @@ services:
       HOST_NAME: "minion7"
     build:
       context: .
-      dockerfile: /Minion/Dockerfile
+      dockerfile: ./Minion/Dockerfile
     restart: unless-stopped
     depends_on:
       - master
@@ -142,7 +142,7 @@ services:
       HOST_NAME: "minion8"
     build:
       context: .
-      dockerfile: /Minion/Dockerfile
+      dockerfile: ./Minion/Dockerfile
     restart: unless-stopped
     depends_on:
       - master
